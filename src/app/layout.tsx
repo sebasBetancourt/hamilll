@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Ryan Hamill · Founder & AI Entrepreneur",
   description:
-    "Founder en Adeptos AI. Ayudo a empresas a escalar con inteligencia artificial. 🇬🇧🇨🇴",
+    "Ayudo a empresas a escalar con inteligencia artificial. 🇬🇧🇨🇴",
   icons: {
     icon: "/logo2.png",
     shortcut: "/logo2.png",

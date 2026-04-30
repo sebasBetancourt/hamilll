@@ -39,16 +39,15 @@ export default function SubscribeForm({ lang, handle }: Props) {
   }
 
   return (
-    <div className="subscribe-box">
-      <h2 className="subscribe-title">{t.title}</h2>
-      <p className="subscribe-sub">{t.sub}</p>
+    <div className="subscribe-form-wrapper">
+      <h2 className="subscribe-form-title">{t.title}</h2>
 
       {sent ? (
         <p className="subscribe-done">{t.done}</p>
       ) : (
         <form className="subscribe-form" onSubmit={handleSubmit}>
           <input
-            className="subscribe-input"
+            className="subscribe-form-input"
             type="text"
             placeholder={t.firstName}
             value={firstName}
@@ -56,7 +55,7 @@ export default function SubscribeForm({ lang, handle }: Props) {
             required
           />
           <input
-            className="subscribe-input"
+            className="subscribe-form-input"
             type="email"
             placeholder={t.email}
             value={email}
@@ -64,13 +63,13 @@ export default function SubscribeForm({ lang, handle }: Props) {
             required
           />
           <input
-            className="subscribe-input"
+            className="subscribe-form-input"
             type="tel"
             placeholder={t.phone}
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />
-          <button className="subscribe-btn" type="submit">{t.btn}</button>
+          <button className="subscribe-form-btn" type="submit">{t.btn}</button>
         </form>
       )}
     </div>

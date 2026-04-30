@@ -10,7 +10,7 @@ export default function StatsSection({ lang }: Props) {
   return (
     <div className="stats-section">
       <p className="stats-section-title">
-        {lang === "es" ? "Adeptos en numeros" : "Adeptos by the numbers"}
+        {lang === "es" ? "Impacto" : "Impact"}
       </p>
       {ADEPTOS_STATS.map((s) => (
         <div className="stat-item" key={s.number}>

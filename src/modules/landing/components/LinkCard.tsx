@@ -47,6 +47,16 @@ const ICONS: Record<string, React.ReactNode> = {
       <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
     </svg>
   ),
+  x: (
+    <svg viewBox="0 0 24 24" fill="currentColor" width={16} height={16}>
+      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.294 19.497h2.039L6.486 3.24H4.298l13.309 17.41z" />
+    </svg>
+  ),
+  newsletter: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} width={18} height={18}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
+  ),
 };
 
 export default function LinkCard({ card, lang, index }: Props) {
@@ -60,34 +70,20 @@ export default function LinkCard({ card, lang, index }: Props) {
       className={`link-card ${card.highlight ? "link-card--highlight" : ""}`}
       style={{ animationDelay: `${index * 70}ms` }}
     >
-      {/* Icon circle */}
-      <span className="link-card-icon-wrap" aria-hidden>
-        {icon ?? <span className="link-card-icon-text">{card.label[lang].slice(0, 2).toUpperCase()}</span>}
-      </span>
-
-      {/* Text */}
-      <div className="link-card-text">
-        <span className="link-card-label">{card.label[lang]}</span>
-        {card.sublabel && (
-          <span className="link-card-sublabel">{card.sublabel[lang]}</span>
-        )}
+      <div className="link-card-left">
+        {icon && <span className="link-card-icon">{icon}</span>}
+        <div className="link-card-text">
+          <span className="link-card-label">{card.label[lang]}</span>
+          {card.sublabel && (
+            <span className="link-card-sublabel">{card.sublabel[lang]}</span>
+          )}
+        </div>
       </div>
 
       {/* Badge / CTA */}
       {card.badge && (
         <span className="link-card-badge">{card.badge[lang]}</span>
       )}
-
-      {/* Arrow */}
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-        className="link-card-arrow"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-      </svg>
     </a>
   );
 }

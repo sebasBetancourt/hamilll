@@ -8,12 +8,12 @@ export const PROFILE = {
   handle: "@hamilll",
   email:  "ryan@adeptos.ai",
   role: {
-    es: "Founder · CEO · Adeptos AI",
-    en: "Founder · CEO · Adeptos AI",
+    es: "Empresario · Especialista en IA",
+    en: "Entrepreneur · AI Specialist",
   },
   bio: {
-    es: "Founder · Ayudo a empresas a escalar con Inteligencia Artificial",
-    en: "Founder · I help businesses scale with Artificial Intelligence",
+    es: "Ayudo a empresas a escalar con Inteligencia Artificial",
+    en: "I help businesses scale with Artificial Intelligence",
   },
 } as const;
 
@@ -29,9 +29,10 @@ export const SOCIAL_LINKS = {
 // ── Links principales (tarjetas de la página) ─────────────────────────────────
 export const PAGE_LINKS = {
   adeptos:    "https://adeptos.ai",
-  audit:      "https://adeptos.ai/audit",            // Auditoría IA Gratuita
-  zono:       "https://zono.ai",
+  audit:      "https://adeptos.ai",            // Auditoría IA Gratuita
+  zono:       "https://zono.cc/",
   community:  SOCIAL_LINKS.whatsapp,                 // mismo link de la comunidad
+  zonoCommunity: "https://zono.ai/community",
   newsletter: "https://adeptos.ai/newsletter",
   consulting: "https://adeptos.ai/consulting",
 } as const;
@@ -47,13 +48,35 @@ export const FORM_ENDPOINTS = {
   aiAudit:    null as string | null,   // ej. "https://adeptos.ai/api/audit"
 } as const;
 
-// ── Empresas cliente que aparecen en el strip de credibilidad ─────────────────
+// ── Compañías ─────────────────
 export const CLIENT_COMPANIES = [
-  "Valvetronic",
-  "216 Maintenance",
-  "FR Hotel",
-  "Proyectamos",
-  "ZONO",
+  {
+    name: "Adeptos.ai",
+    desc: {
+      es: "Agencia de automatización con IA líder en Latinoamérica.",
+      en: "Leading AI automation agency in Latin America.",
+    },
+    link: PAGE_LINKS.adeptos,
+    hasButton: true,
+  },
+  {
+    name: "Zono",
+    desc: {
+      es: "Plataforma de e-commerce impulsada por IA para escalar ventas.",
+      en: "AI-powered e-commerce platform to scale sales.",
+    },
+    link: PAGE_LINKS.zono,
+    hasButton: true,
+  },
+  {
+    name: "Sistemas Que Escalan",
+    desc: {
+      es: "Consultoría estratégica para optimización de procesos.",
+      en: "Strategic consulting for process optimization.",
+    },
+    link: "https://sistemasqueescalan.com",
+    hasButton: false,
+  },
 ] as const;
 
 // ── Estadísticas de Adeptos (sección "Adeptos en números") ───────────────────
