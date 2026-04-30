@@ -23,7 +23,7 @@ export interface LinkCard {
 export interface ProfileData {
   name: string;
   handle: string;
-  avatarUrl: string;
+  avatarUrl?: string;
   flagEmojis: string[];
   bio: { es: string; en: string };
   stats: { posts: number; followers: string; following: number };
