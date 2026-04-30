@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   description:
     "Ayudo a empresas a escalar con inteligencia artificial. 🇬🇧🇨🇴",
   icons: {
-    icon: "/logo2.png",
-    shortcut: "/logo2.png",
-    apple: "/logo2.png",
+    icon: "/favicon-rh.png",
+    shortcut: "/favicon-rh.png",
+    apple: "/favicon-rh.png",
   },
   openGraph: {
     title: "Ryan Hamill · Founder & AI Entrepreneur",

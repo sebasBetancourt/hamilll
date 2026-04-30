@@ -52,6 +52,7 @@ export const FORM_ENDPOINTS = {
 export const CLIENT_COMPANIES = [
   {
     name: "Adeptos.ai",
+    logo: "/logo.png",
     desc: {
       es: "Agencia de automatización con IA líder en Latinoamérica.",
       en: "Leading AI automation agency in Latin America.",
@@ -61,6 +62,7 @@ export const CLIENT_COMPANIES = [
   },
   {
     name: "Zono",
+    logo: "/zono.png",
     desc: {
       es: "Plataforma de e-commerce impulsada por IA para escalar ventas.",
       en: "AI-powered e-commerce platform to scale sales.",

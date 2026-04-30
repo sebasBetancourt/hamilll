@@ -95,9 +95,15 @@ export default function LinktreePage() {
           </div>
           {CLIENT_COMPANIES.map((company) => (
             <div className="company-card" key={company.name}>
-              <div className="company-info">
-                <h3 className="company-name">{company.name}</h3>
-                <p className="company-desc">{company.desc[lang]}</p>
+              <div className="company-card-header">
+                {"logo" in company && (
+                  /* eslint-disable-next-line @next/next/no-img-element */
+                  <img src={company.logo} alt={company.name} className="company-logo" />
+                )}
+                <div className="company-info">
+                  <h3 className="company-name">{company.name}</h3>
+                  <p className="company-desc">{company.desc[lang]}</p>
+                </div>
               </div>
               {company.hasButton && (
                 <a 
