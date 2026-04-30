@@ -42,7 +42,7 @@ export const PAGE_LINKS = {
 // reemplaza los valores null con la URL del endpoint correspondiente.
 export const FORM_ENDPOINTS = {
   // Formulario principal de suscripción (nombre + email + teléfono)
-  subscribe:  null as string | null,   // ej. "https://hook.eu1.make.com/xyz"
+  subscribe:  "/api/subscribe",   // Proxy seguro hacia GHL
 
   // Formulario de la Auditoría de IA Gratuita (solo email)
   aiAudit:    null as string | null,   // ej. "https://adeptos.ai/api/audit"

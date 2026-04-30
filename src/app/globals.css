@@ -427,6 +427,32 @@ body {
   border-color: var(--text);
 }
 
+.phone-input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.country-select {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 0 12px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font);
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition);
+  min-width: 100px;
+}
+
+.country-select:focus {
+  border-color: var(--text);
+}
+
+.phone-input {
+  flex: 1;
+}
+
 .subscribe-form-btn {
   background: black;
   color: white;
