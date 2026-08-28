@@ -12,8 +12,8 @@ export const PROFILE = {
     en: "Entrepreneur · AI Specialist",
   },
   bio: {
-    es: "Ayudo a empresas a escalar con Inteligencia Artificial",
-    en: "I help businesses scale with Artificial Intelligence",
+    es: "Ayudo a empresas a escalar con IA",
+    en: "I help businesses scale with AI",
   },
 } as const;
 
@@ -22,17 +22,17 @@ export const SOCIAL_LINKS = {
   instagram:  "https://www.instagram.com/hamilll",
   tiktok:     "https://www.tiktok.com/@hamilll",
   x:          "https://x.com/hamilll",
-  youtube:    "https://www.youtube.com/@hamilll",
-  whatsapp:   "https://chat.whatsapp.com/adeptos",   // comunidad Adopters
+  youtube:    "https://www.youtube.com/@Theryanhamill",
+  whatsapp:   "https://chat.whatsapp.com/KV6tkxFAmGz20XGveIfEMb",
 } as const;
 
 // ── Links principales (tarjetas de la página) ─────────────────────────────────
 export const PAGE_LINKS = {
   adeptos:    "https://adeptos.ai",
-  audit:      "https://adeptos.ai",            // Auditoría IA Gratuita
+  audit:      "https://adeptos.ai/es/audit-ai/",
   zono:       "https://zono.cc/",
-  community:  SOCIAL_LINKS.whatsapp,                 // mismo link de la comunidad
-  zonoCommunity: "https://zono.ai/community",
+  community:  SOCIAL_LINKS.whatsapp,
+  zonoCommunity: "https://chat.whatsapp.com/HZ32VE2fGFKJCo7ViJRZR7?mode=gi_t",
   newsletter: "https://adeptos.ai/newsletter",
   consulting: "https://adeptos.ai/consulting",
 } as const;
@@ -64,20 +64,11 @@ export const CLIENT_COMPANIES = [
     name: "Zono",
     logo: "/zono.png",
     desc: {
-      es: "Plataforma de e-commerce impulsada por IA para escalar ventas.",
-      en: "AI-powered e-commerce platform to scale sales.",
+      es: "Una comunidad de comerciantes para apoyarnos y crecer a través de la tecnología y la automatización ⚡",
+      en: "A community of merchants supporting each other and growing through technology and automation ⚡",
     },
     link: PAGE_LINKS.zono,
     hasButton: true,
-  },
-  {
-    name: "Sistemas Que Escalan",
-    desc: {
-      es: "Consultoría estratégica para optimización de procesos.",
-      en: "Strategic consulting for process optimization.",
-    },
-    link: "https://sistemasqueescalan.com",
-    hasButton: false,
   },
 ] as const;
 

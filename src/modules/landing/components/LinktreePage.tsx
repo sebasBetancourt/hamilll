@@ -14,8 +14,8 @@ export default function LinktreePage() {
   const profile = ryanHamillData;
 
   // Filter links into categories
-  const communityLinks = profile.links.filter(l => 
-    l.id === "community" || l.id === "newsletter" || l.id === "zono-community"
+  const communityLinks = profile.links.filter(l =>
+    l.id === "community" || l.id === "zono-community"
   );
   
   const socialLinks = profile.links.filter(l => 
@@ -71,7 +71,7 @@ export default function LinktreePage() {
 
         {/* 2 — Audit Section (Restored & Updated) */}
         <section className="audit-cta-section">
-          <a href={PAGE_LINKS.audit} className="audit-cta-box">
+          <a href={PAGE_LINKS.audit} target="_blank" rel="noopener noreferrer" className="audit-cta-box">
             <span className="audit-title">
               {lang === "es" ? "Auditoría de IA Gratuita" : "Free AI Audit"}
             </span>
