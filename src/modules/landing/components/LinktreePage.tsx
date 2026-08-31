@@ -3,11 +3,13 @@
 
 import { ryanHamillData } from "@/modules/landing/data/profileData";
 import { useLanguage } from "@/modules/landing/application/useLanguage";
-import { CLIENT_COMPANIES, PAGE_LINKS } from "@/modules/landing/data/constants";
+import { CLIENT_COMPANIES } from "@/modules/landing/data/constants";
 import ProfileHeader from "./ProfileHeader";
 import LinkCard from "./LinkCard";
 import LanguageToggle from "./LanguageToggle";
 import SubscribeForm from "./SubscribeForm";
+import { AgentChatPanel } from "@/modules/agent-chat";
+import { getChatDict } from "@/modules/agent-chat/i18n";
 
 export default function LinktreePage() {
   const { lang, toggle } = useLanguage();
@@ -69,24 +71,12 @@ export default function LinktreePage() {
         {/* 1 — Hero profile */}
         <ProfileHeader profile={profile} lang={lang} />
 
-        {/* 2 — Audit Section (Restored & Updated) */}
-        <section className="audit-cta-section">
-          <a href={PAGE_LINKS.audit} target="_blank" rel="noopener noreferrer" className="audit-cta-box">
-            <span className="audit-title">
-              {lang === "es" ? "Auditoría de IA Gratuita" : "Free AI Audit"}
-            </span>
-            <p className="audit-desc">
-              {lang === "es" 
-                ? "Descubre cuánto revenue estás perdiendo cada mes y cómo la IA puede ayudarte a escalar."
-                : "Find out how much revenue you're leaking every month and how AI can help you scale."}
-            </p>
-            <span className="audit-btn">
-              {lang === "es" ? "Empezar Auditoría" : "Start Audit"}
-            </span>
-          </a>
+        {/* 2 — Agent chat (Auditoría IA) */}
+        <section className="agent-chat-section" aria-label={getChatDict(lang).sectionLabel}>
+          <AgentChatPanel lang={lang} />
         </section>
 
-        {/* 3 — Companies Section (Redesigned) */}
+        {/* 3 — Companies Section */}
         <section className="companies-section">
           <div className="section-header">
             <span className="section-label">
