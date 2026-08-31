@@ -497,6 +497,191 @@ body {
   }
 }
 
+/* ── Floating chat widget ───────────────────────────────────────────────────── */
+.agent-chat-widget-root {
+  --brand-navy: #22333b;
+  --brand-navy-light: #2d4a56;
+  --brand-sage: #cadf9e;
+  --brand-mist: #e8eee9;
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 200;
+  pointer-events: none;
+}
+
+.agent-chat-fab,
+.agent-chat-popup {
+  pointer-events: auto;
+}
+
+.agent-chat-fab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--brand-navy);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--brand-navy) 12%, transparent),
+    0 12px 32px -8px color-mix(in srgb, var(--brand-navy) 45%, transparent);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.agent-chat-fab:hover {
+  transform: translateY(-2px);
+  background: var(--brand-navy-light);
+}
+
+.agent-chat-fab--open {
+  transform: rotate(0deg);
+}
+
+.agent-chat-fab-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.agent-chat-popup {
+  position: absolute;
+  right: 0;
+  bottom: calc(56px + 12px);
+  display: flex;
+  flex-direction: column;
+  width: min(calc(100vw - 32px), 360px);
+  height: min(72dvh, 520px);
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, white 92%, var(--brand-mist));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--brand-navy) 8%, transparent),
+    0 24px 48px -12px color-mix(in srgb, var(--brand-navy) 28%, transparent);
+  animation: agentChatPopupIn 0.22s ease-out;
+}
+
+@keyframes agentChatPopupIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.agent-chat-popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-shrink: 0;
+  padding: 12px 14px;
+  border-bottom: 1px solid color-mix(in srgb, var(--brand-navy) 8%, transparent);
+}
+
+.agent-chat-popup-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--brand-navy);
+}
+
+.agent-chat-popup-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.agent-chat-popup-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: color-mix(in srgb, var(--brand-navy) 55%, transparent);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.agent-chat-popup-close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.agent-chat-popup-close:hover {
+  background: color-mix(in srgb, var(--brand-navy) 6%, transparent);
+  color: var(--brand-navy);
+}
+
+.agent-chat-popup-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-image: radial-gradient(
+    ellipse 95% 60% at 50% 20%,
+    color-mix(in srgb, var(--brand-sage) 12%, transparent),
+    transparent 72%
+  );
+}
+
+.agent-chat-popup-body .agent-chat-panel {
+  height: 100%;
+}
+
+.agent-chat-popup-body .agent-chat-form {
+  padding: 8px 10px max(10px, env(safe-area-inset-bottom));
+}
+
+/* ── Adeptos WhatsApp CTA ───────────────────────────────────────────────────── */
+.adeptos-wa-section {
+  width: 100%;
+}
+
+.adeptos-wa-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.adeptos-wa-logo {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.adeptos-wa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 639px) {
+  .agent-chat-popup {
+    width: min(calc(100vw - 24px), 360px);
+    height: min(78dvh, 560px);
+    right: 0;
+    bottom: calc(56px + 10px);
+  }
+}
+
 /* ── Audit Section (legacy CTA — removed from page, styles kept for reference) */
 .audit-cta-section {
   width: 100%;

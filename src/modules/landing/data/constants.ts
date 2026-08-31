@@ -30,6 +30,7 @@ export const SOCIAL_LINKS = {
 export const PAGE_LINKS = {
   adeptos:    "https://adeptos.ai",
   audit:      "https://adeptos.ai/es/audit-ai/",
+  adeptosWhatsApp: "https://wa.me/573123138605",
   zono:       "https://zono.cc/",
   community:  SOCIAL_LINKS.whatsapp,
   zonoCommunity: "https://chat.whatsapp.com/HZ32VE2fGFKJCo7ViJRZR7?mode=gi_t",

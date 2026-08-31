@@ -8,8 +8,8 @@ import ProfileHeader from "./ProfileHeader";
 import LinkCard from "./LinkCard";
 import LanguageToggle from "./LanguageToggle";
 import SubscribeForm from "./SubscribeForm";
-import { AgentChatPanel } from "@/modules/agent-chat";
-import { getChatDict } from "@/modules/agent-chat/i18n";
+import AdeptosWhatsAppCard from "./AdeptosWhatsAppCard";
+import { AgentChatWidget } from "@/modules/agent-chat";
 
 export default function LinktreePage() {
   const { lang, toggle } = useLanguage();
@@ -71,9 +71,9 @@ export default function LinktreePage() {
         {/* 1 — Hero profile */}
         <ProfileHeader profile={profile} lang={lang} />
 
-        {/* 2 — Agent chat (Auditoría IA) */}
-        <section className="agent-chat-section" aria-label={getChatDict(lang).sectionLabel}>
-          <AgentChatPanel lang={lang} />
+        {/* 2 — WhatsApp agent link */}
+        <section className="links-group adeptos-wa-section">
+          <AdeptosWhatsAppCard lang={lang} />
         </section>
 
         {/* 3 — Companies Section */}
@@ -150,6 +150,8 @@ export default function LinktreePage() {
         </footer>
 
       </main>
+
+      <AgentChatWidget lang={lang} />
     </div>
   );
 }
