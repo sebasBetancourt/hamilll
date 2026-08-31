@@ -8,7 +8,8 @@ interface AdeptosWhatsAppCardProps {
 }
 
 export default function AdeptosWhatsAppCard({ lang }: AdeptosWhatsAppCardProps) {
-  const label = lang === "es" ? "Habla con Adeptos" : "Chat with Adeptos";
+  const label =
+    lang === "es" ? "Habla con el Agente de Adeptos" : "Chat with the Adeptos Agent";
   const sublabel =
     lang === "es" ? "WhatsApp · Agente Adeptos" : "WhatsApp · Adeptos agent";
 
